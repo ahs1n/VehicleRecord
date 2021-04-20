@@ -6,7 +6,7 @@ import com.example.vehiclerecord.model.Vehicle
 
 class VehicleRepository(private val vehicleDao: VehicleDao) {
 
-    val readAllData: LiveData<List<Vehicle>> = vehicleDao.readAllData(vehicleNo = String())
+    val readAllData: LiveData<List<Vehicle>> = vehicleDao.readAllData()
 
     fun addVehicle(vehicle: Vehicle) {
         vehicleDao.addVehicle(vehicle)

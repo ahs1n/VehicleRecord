@@ -15,7 +15,7 @@ data class Vehicle(
     val meter_in: String,
     val meter_out: String,
     val remarks: String,
-    val todayDate: String,
-    val picName: String
+    val todayDate: String
+//    val picName: String
 
 ) : Parcelable

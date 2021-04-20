@@ -1,0 +1,140 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="button" parent="Widget.AppCompat.Button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:radius">2dp</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">@color/gray</item>
+        <!--        <item name="android:background">@drawable/background_grad</item>-->
+    </style>
+
+    <!--    <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
+            <item name="sv_backgroundColor">#33b78ff7</item>
+            <item name="sv_showcaseColor">@color/colorPrimaryDark</item>
+            <item name="sv_buttonText">OK</item>
+            <item name="sv_titleTextAppearance">@style/CustomTitle</item>
+            <item name="sv_detailTextAppearance">@style/CustomTitle</item>
+        </style>
+
+        <style name="CustomTitle" parent="TextAppearance.ShowcaseView.Title">
+            <item name="android:textColor">@android:color/black</item>
+            <item name="android:textSize">30sp</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        </style>-->
+
+
+    <!--Card View Start-->
+    <style name="cardView" parent="CardView.Light">
+        <!--
+                <item name="android:background">@color/white</item>
+        -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">@color/grayOverlay</item>
+
+        <!--<item name="android:layout_marginRight">10dp</item>-->
+        <!--<item name="android:layout_marginLeft">10dp</item>-->
+        <item name="android:radius">12dp</item>
+        <item name="elevation">4dp</item>
+    </style>
+
+    <style name="vlinearlayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/blackOverlay</item>
+    </style>
+
+
+    <style name="quesNum">
+        <item name="android:background">@color/colorSecondary</item>
+        <item name="android:textColor">@color/grayLight</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+    </style>
+
+    <style name="info">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:background">#FFEB9C</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="sub">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="textView">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@color/whiteOverlay</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="textViewIntro">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:background">@color/whiteOverlay</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="expandCollapse">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Summary_Layout" parent="Theme.AppCompat.Light.DarkActionBar"></style>
+
+</resources>

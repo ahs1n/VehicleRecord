@@ -16,4 +16,7 @@ interface VehicleDao {
     @Query("SELECT * FROM vehicle_table WHERE vehilceNo = :vehicleNo ORDER BY id ASC")
     fun readAllData(vehicleNo: String): LiveData<List<Vehicle>>
 
+    @Query("SELECT * FROM vehicle_table")
+    fun readAllData(): LiveData<List<Vehicle>>
+
 }
