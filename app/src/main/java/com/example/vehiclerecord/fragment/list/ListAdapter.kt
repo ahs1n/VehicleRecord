@@ -38,7 +38,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.meterOut_txt.text = currentItem.meter_out
 
         holder.itemView.timeOut.setOnClickListener {
-            val action = ListFragmentDirections.actionListFragmentToUpdateFragment()
+            val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
             holder.itemView.findNavController().navigate(action)
         }
     }

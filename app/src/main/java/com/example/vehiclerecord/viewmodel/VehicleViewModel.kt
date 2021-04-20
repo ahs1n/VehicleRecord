@@ -27,4 +27,10 @@ class VehicleViewModel(application: Application) : AndroidViewModel(application)
             repository.addVehicle(vehicle)
         }
     }
+
+    fun updateVehicle(vehicle: Vehicle) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateVehicle(vehicle)
+        }
+    }
 }
