@@ -116,7 +116,6 @@
                                 android:text="999999"
                                 android:textColor="#7f000051"
                                 android:textSize="18sp">
-
                             </TextView>
 
                             <TextView
