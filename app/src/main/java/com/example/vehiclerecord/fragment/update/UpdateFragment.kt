@@ -40,8 +40,10 @@ class UpdateFragment : Fragment() {
 
         view.updateTimeOut.setOnClickListener {
             updateItem()
-        }
+            if (!validate()) {
+            }
 
+        }
         return view
     }
 
@@ -86,5 +88,13 @@ class UpdateFragment : Fragment() {
         return !(TextUtils.isEmpty(driverName) && TextUtils.isEmpty(vehicleNo) && TextUtils.isEmpty(
             date
         ) && TextUtils.isEmpty(meterIn) && TextUtils.isEmpty(meterOut) && TextUtils.isEmpty(remarks))
+    }
+
+    private fun validate(): Boolean {
+        if (updateMeterOut.text.toString().isEmpty()) {
+            updateMeterOut.error = "Please enter meter out reading"
+            return false
+        }
+        return true
     }
 }

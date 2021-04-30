@@ -170,6 +170,14 @@
                         android:orientation="horizontal">
 
                         <Button
+                            android:id="@+id/timeIn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:text="Time In"
+                            android:visibility="gone"></Button>
+
+                        <Button
                             android:id="@+id/timeOut"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

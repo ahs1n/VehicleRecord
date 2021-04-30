@@ -8,6 +8,7 @@
     <color name="colorPrimaryDark_overlay">#7f0D47A1</color>
     <color name="colorPrimaryLight">#64B5F6</color>
     <color name="colorPrimaryLight_overlay">#7f64B5F6</color>
+    <color name="colorPrimaryBeta">#3d311b92</color>
 
     <color name="colorSecondary">#FF6D00</color>
     <color name="colorSecondary_overlay">#7fFF6D00</color>
