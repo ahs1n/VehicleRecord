@@ -21,6 +21,8 @@ import com.example.vehiclerecord.data.VehicleDatabase
 import com.example.vehiclerecord.databinding.ActivityLoginBinding
 import com.example.vehiclerecord.repository.GeneralRepository
 import com.example.vehiclerecord.repository.ResponseStatus
+import com.example.vehiclerecord.utils.extension.isGPSEnabled
+import com.example.vehiclerecord.utils.extension.isNetworkConnected
 import com.example.vehiclerecord.utils.extension.obtainViewModel
 import com.example.vehiclerecord.viewmodel.LoginViewModel
 import com.github.amlcurran.showcaseview.ShowcaseView
@@ -31,12 +33,7 @@ import edu.aku.hassannaqvi.naunehal.CONSTANTS
 import edu.aku.hassannaqvi.naunehal.base.repository.ResponseStatus.*
 import edu.aku.hassannaqvi.naunehal.location.GPSLocationListener
 import edu.aku.hassannaqvi.naunehal.models.Users
-import edu.aku.hassannaqvi.naunehal.ui.MainActivity
-import edu.aku.hassannaqvi.naunehal.ui.SyncActivity
 import edu.aku.hassannaqvi.naunehal.ui.login_activity.login_view.LoginUISource
-import edu.aku.hassannaqvi.naunehal.utils.extension.gotoActivity
-import edu.aku.hassannaqvi.naunehal.utils.isGPSEnabled
-import edu.aku.hassannaqvi.naunehal.utils.isNetworkConnected
 import edu.aku.hassannaqvi.naunehal.utils.showGPSAlert
 import kotlinx.coroutines.*
 
@@ -67,7 +64,7 @@ class LoginActivity : AppCompatActivity(), LoginUISource {
             when (it.status) {
                 ResponseStatus.SUCCESS -> {
                     approval = true
-                    MainApp.user = it.data
+                    MainApp.users = it.data
                     MainApp.admin = it.data!!.userName.contains("@")
                 }
                 ResponseStatus.ERROR -> {
@@ -91,7 +88,7 @@ class LoginActivity : AppCompatActivity(), LoginUISource {
             Toast.makeText(this, "Network connection not available!", Toast.LENGTH_SHORT).show()
             return
         }
-        gotoActivity(SyncActivity::class.java)
+//        gotoActivity(SyncActivity::class.java)
     }
 
     /*
@@ -133,7 +130,7 @@ class LoginActivity : AppCompatActivity(), LoginUISource {
                 job.join()
                 if (approval) {
                     showProgress(false)
-                    gotoActivity(MainActivity::class.java)
+//                    gotoActivity(MainActivity::class.java)
                 }
             }
 
