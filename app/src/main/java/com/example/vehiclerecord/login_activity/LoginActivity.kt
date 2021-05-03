@@ -19,23 +19,18 @@ import com.example.vehiclerecord.R
 import com.example.vehiclerecord.core.MainApp
 import com.example.vehiclerecord.data.VehicleDatabase
 import com.example.vehiclerecord.databinding.ActivityLoginBinding
+import com.example.vehiclerecord.model.Users
 import com.example.vehiclerecord.repository.GeneralRepository
 import com.example.vehiclerecord.repository.ResponseStatus
 import com.example.vehiclerecord.utils.extension.isGPSEnabled
 import com.example.vehiclerecord.utils.extension.isNetworkConnected
 import com.example.vehiclerecord.utils.extension.obtainViewModel
+import com.example.vehiclerecord.utils.showGPSAlert
 import com.example.vehiclerecord.viewmodel.LoginViewModel
-import com.github.amlcurran.showcaseview.ShowcaseView
-import com.github.amlcurran.showcaseview.targets.ViewTarget
 import com.nabinbhandari.android.permissions.PermissionHandler
-import com.nabinbhandari.android.permissions.Permissions
-import edu.aku.hassannaqvi.naunehal.CONSTANTS
-import edu.aku.hassannaqvi.naunehal.base.repository.ResponseStatus.*
-import edu.aku.hassannaqvi.naunehal.location.GPSLocationListener
-import edu.aku.hassannaqvi.naunehal.models.Users
 import edu.aku.hassannaqvi.naunehal.ui.login_activity.login_view.LoginUISource
-import edu.aku.hassannaqvi.naunehal.utils.showGPSAlert
 import kotlinx.coroutines.*
+import java.security.Permissions
 
 
 class LoginActivity : AppCompatActivity(), LoginUISource {
@@ -200,7 +195,7 @@ class LoginActivity : AppCompatActivity(), LoginUISource {
         if ((username == "dmu@aku" && password == "aku?dmu") ||
             (username == "test1234" && password == "test1234")
         ) {
-            MainApp.user = Users(username, "Test User")
+            MainApp.users = Users(username, "Test User")
             MainApp.admin = username.contains("@")
             approval = true
         } else
